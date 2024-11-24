@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PARCIAL.CSS">
+    <!--primera fuente: se usa para el titulo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <!--segunda  fuente: para en general-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./multimedia/Diseño_sin_título__3_-removebg-preview.png" type="image/x-icon" style="width:20px; height:20px;">
+    <script src="https://kit.fontawesome.com/b21cb1d120.js" crossorigin="anonymous"></script>
+    <title>Biclioteca</title>
+</head>
+
+<body>
+
+    <div id="INICIO">
+    </div>
+    <div class="botonespag">
+        <button onclick="history.back()">Volver atrás</button>
+    </div>
+    <div class="registro" id="registro">
+        <!-- TABLA DE LOS MIEMBROS-->
+        <table border="2">
+            <caption>MIEMBRO REGISTRADOS</caption>
+            <tr>
+                <th>ID</th>
+                <th>nombre de miembro</th>
+                <TH>DNI</TH>
+                <th>telefono</th>
+                <TH>gmail</TH>
+                <th>Comandos</th>
+            </tr>
+            <tbody id="itemTable"></tbody>
+        </table>
+    </div>
+    <div class="registro-miembro" id="registro-miembro">
+        <h3 class="titulo-registro-miembro"><strong>REGISTRARSE PARA SER MIEMBRO</strong></h3>
+        <form id="itemFormEditar" action="">
+            <input type="hidden" id="itemIdEditar" value="">
+            <label for="">apellido y nombre</label>
+            <input type="text" name="nombre" id="nombreEditar" required placeholder="pedrito gutierrez"><br><br>
+            <label for="">ingrese dni</label>
+            <input type="number" name="numero" id="dniEditar" placeholder="12345678"><br>
+            <label for="gamil">correo electronico</label>
+            <input type="email" name="correo-electronico" id="correoEditar" required placeholder="ola@gmail.com"><br><br>
+            <label for="telefono">ingrese su numero de celular</label>
+            <input type="number" name="telefono" id="telefonoEditar" required placeholder="381000000"><br><br>
+            <button type="submit">enviar</button>
+           
+        </form>
+    </div>
+    </div>
+    
+<script src="CLIENTE-CHICOS.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", cargar_miembro); 
+    document.getElementById('itemFormEditar').addEventListener('submit', guardarMiembro);
+</script>
+</body>
+</html>

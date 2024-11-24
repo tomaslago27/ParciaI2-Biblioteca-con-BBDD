@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PARCIAL.CSS">
+    <!--primera fuente: se usa para el titulo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <!--segunda  fuente: para en general-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./multimedia/Diseño_sin_título__3_-removebg-preview.png" type="image/x-icon" style="width:20px; height:20px;">
+    <script src="https://kit.fontawesome.com/b21cb1d120.js" crossorigin="anonymous"></script>
+    <title>Biclioteca</title>
+</head>
+
+<body>
+
+    <div id="INICIO">
+    </div>
+     <!--BLOQUE QUE MUESTRA LA DISPONIVILIDAD DE LOS LIBROS Y DE LOS MIEMBROS -->
+     <div class="disponibilidad" id="disponibilidad">
+        <!--TABLA DE LOS LIBROS DISPONIBLES -->
+        <table border="2">
+            <caption>LIBROS DISPONIBLES</caption>
+            <TR>
+                <th>Id Libro</th>
+                <th>titulo del libro</th>
+                <th>autor</th>
+                <th>Editorial libro</th>
+                <th>genero</th>
+            </TR>
+            <tbody id="libroTable2"></tbody>
+        </table>  
+    </div>
+    <div class="botonespag">
+    <button onclick="history.back()">Volver atrás</button>
+    </div>
+    <div class="registro-libro" id="registro-libro">
+        <H3 class="titulo-registro-libro">REGISTRE SU LIBRO</H3>
+        <form id="itemForm2" action="">
+            <input type="hidden" id="id_libroEditar" value="">
+            <label for="titulo">titulo </label>
+            <input type="text" name="titulo" id="tituloEditar" required placeholder="pedrito de la mancha"><br><br>
+            <label for="autor">autor</label>
+            <input type="text" name="autor" id="autorEditar" required placeholder="paulo cohelo"><br>
+            <label for="genero">genero</label>
+            <input type="text" name="genero" id="generoEditar" required placeholder="accion"><br>
+            <label for="">Editorial</label><br>
+            <input type="text" name="Editorial" id="EditorialEditar" required><br><br>
+            <button type="submit">enviar</button>
+        </form>
+    </div>
+    <script src="CLIENTE-CHICOS.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", cargar_libro); 
+    document.getElementById('itemForm2').addEventListener('submit', guardarLibro);
+</script>
+ </body>
+ </html>

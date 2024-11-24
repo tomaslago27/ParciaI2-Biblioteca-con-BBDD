@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PARCIAL.CSS">
+    <!--primera fuente: se usa para el titulo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <!--segunda  fuente: para en general-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./multimedia/Diseño_sin_título__3_-removebg-preview.png" type="image/x-icon" style="width:20px; height:20px;">
+    <script src="https://kit.fontawesome.com/b21cb1d120.js" crossorigin="anonymous"></script>
+    <title>Biclioteca</title>
+</head>
+
+<body>
+    <!--BARRA DE NAVEGACIO(?) -->
+
+    <nav class="barra-navegacion">
+        <h1 class="titulo"><a href="#INICIO"><strong>BIBLIOTECA: ALEJANDRIA</strong></a></h1>
+        <ul>
+
+            <li><a href="#registro-miembro">RESGISTRAS MIEMBROS</a></li>
+            <li><a href="#registro-libro">REGISTRAR LIBROS</a></li>
+            <li><a href="#entraga-devolucion">ENTREGA O DEVOLUCION</a></li>
+            <li> <a href="#disponibilidad">DISPONIBILIDAD DE LIBROS</a></li>
+            <li> <a href="#registro">MIENBROS REGISTRADOS</a></li>
+           
+        </ul>
+        <div class="menu" id="menu">
+            <button class="responsive" id="responsive"><i class="fa-solid fa-bars fa-beat"></i> </button>
+           </div>
+    </nav>
+
+    <div id="INICIO">
+    </div>
+    <div class="container">
+        <button onclick="location.href='lista-libro.html'"> Tabla Libros</button>
+        <button onclick="location.href='lista-miembro.html';">Tabla Miembro</button>
+</div>
+    <!--aqui inicia la parte de grid -->
+    <div class="contenedor">
+
+
+
+        <!-- BLOQUE DE REGISTRO DE LOS MIEMBROS -->
+        <div class="registro-miembro" id="registro-miembro">
+            <h3 class="titulo-registro-miembro"><strong>REGISTRARSE PARA SER MIEMBRO</strong></h3>
+            <form id="itemForm" action="">
+                <input type="hidden" id="itemId" value="">
+                <label for="">apellido y nombre</label>
+                <input type="text" name="nombre" id="nombre" required placeholder="pedrito gutierrez"><br><br>
+                <label for="">ingrese dni</label>
+                <input type="number" name="numero" id="dni" placeholder="12345678"><br>
+                <label for="gamil">correo electronico</label>
+                <input type="email" name="correo-electronico" id="correo" required placeholder="ola@gmail.com"><br><br>
+                <label for="telefono">ingrese su numero de celular</label>
+                <input type="number" name="telefono" id="telefono" required placeholder="381000000"><br><br>
+                <button type="submit">enviar</button>
+               
+            </form>
+        </div>
+        <!--BLOQUE DE REGISTRO DE LIBROS -->
+        <div class="registro-libro" id="registro-libro">
+            <H3 class="titulo-registro-libro">REGISTRE SU LIBRO</H3>
+            <form id="itemForm1" action="">
+                <input type="hidden" id="id_libro" value="">
+                <label for="titulo">titulo </label>
+                <input type="text" name="titulo" id="titulo" required placeholder="pedrito de la mancha"><br><br>
+                <label for="autor">autor</label>
+                <input type="text" name="autor" id="autor" required placeholder="paulo cohelo"><br>
+                <label for="genero">genero</label>
+                <input type="text" name="genero" id="genero" required placeholder="accion"><br>
+                <label for="">Editorial</label><br>
+                <input type="text" name="Editorial" id="Editorial" required><br><br>
+                <button type="submit">enviar</button>
+            </form>
+        </div>
+
+        <!-- BLOQUE DE ENTREGA Y DEVOLUCION DE LOS LIBROS -->
+        <div class="entraga-devolucion" id="entraga-devolucion">
+            <div class="entrega">
+                <!-- ENTREGA -->
+                <h3><strong>ENTREGA DE LIBRO</strong></H3>
+                <form id="Prestamo1" action="">
+                    <label for="miembro-prestado">ingrese nombre del miembro que quiera prestar</label>
+                    <input type="text" name="miembro-prestado" id="miembro-prestado" required
+                        placeholder="pedrito"><br><br>
+                    <label for="titulo-prestado">titulo </label>
+                    <input type="text" name="titulo-prestado" id="titulo-prestado" required
+                        placeholder="pedrito de la mancha"><br><br>
+                    <button type="submit">enviar</button>
+                </form>
+            </div>
+            <div class="devolucion">
+                <!--DEVOLUCION -->
+                <H3><strong>DEVOLUCION DE LIBROS</strong></H3>
+                <form id="devolver1" action="">
+                    <label for="miembro-devuelto">ingrese nombre del miembro que quiera devolver</label>
+                    <input type="text" name="miembro-devuelto" id="miembro-devuelto" required
+                        placeholder="pedrito"><br><br>
+                    <label for="titulo-devuelto">devolucion de libro</label>
+                    <input type="text" name="titulo-devuelto" id="titulo-devuelto" required
+                        placeholder="pedrito de la mancha"><br><br>
+                    <button type="submit">enviar</button>
+                </form>
+            </div>
+        </div>
+        <!--BLOQUE QUE MUESTRA LA DISPONIVILIDAD DE LOS LIBROS Y DE LOS MIEMBROS -->
+        <div class="disponibilidad" id="disponibilidad">
+          
+        </div>
+        <div class="registro" id="registro">
+           
+        </div>
+        
+        <div class="consulta"> <br><br><br><br><br><br><br>
+            <h3 class="texto-consulta">Soporte tecnico</h3>
+            
+            <p class="texto-consulta">Bienvenido a la Biblioteca Central
+<br>
+<p class="texto-consulta">Horarios:</p> 
+<p class="texto-consulta">Lunes a viernes: 8:00 a.m. – 8:00 p.m.</p>
+<p class="texto-consulta">Sábados: 9:00 a.m. – 2:00 p.m.</p>
+<p class="texto-consulta">Domingos: Cerrado</p>
+<p class="texto-consulta">Contacto:</p>
+
+<form>
+    <label for="consulta" class="texto-consulta">Si tienes alguna duda o necesitas asistencia, no dudes en comunicarte con nosotros:</label>
+    <textarea name="consulta" id="consulta" placeholder="mensaje..."></textarea><br>
+    <button>Enviar</button>
+</form>
+</p>
+<p class="texto-consulta">
+ Telefono supervisor: (381) 574-1145
+</p>
+<p class="texto-consulta">
+Correo electrónico: contacto@bibliotecacentral.com
+</p>
+<br><br><br><br>
+        </div>
+    </div>
+
+    <footer class="pie">
+        <a href="#consulta"><p>Numero de contacto del supervisor</p></a>
+       <a href="#consulta"><p>Horarios</p></a>
+       <a href="#consulta"><p>Soporte tecnico</p></a>
+    </footer>
+    <script src="nav.js"></script>
+    <script src="CLIENTE-CHICOS.js"></script>
+<script>
+    document.getElementById('itemForm').addEventListener('submit', guardarMiembro);
+    document.getElementById('itemForm1').addEventListener('submit', guardarLibro);
+    document.getElementById('Prestamo1').addEventListener('submit', Prestamo);
+    document.getElementById('devolver1').addEventListener('submit', Devolver);
+</script>
+</body>
+
+</html>

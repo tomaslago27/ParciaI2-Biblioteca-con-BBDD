@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="PARCIAL.CSS">
+    <!--primera fuente: se usa para el titulo-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap" rel="stylesheet">
+    <!--segunda  fuente: para en general-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Graduate&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./multimedia/Diseño_sin_título__3_-removebg-preview.png" type="image/x-icon" style="width:20px; height:20px;">
+    <script src="https://kit.fontawesome.com/b21cb1d120.js" crossorigin="anonymous"></script>
+    <title>Biclioteca</title>
+</head>
+
+<body>
+    <div id="INICIO">
+    </div>
+    <!--TABLA DE LOS LIBROS PRESTADOS -->
+    <table border="2">
+        <caption id="dueño" > <strong>LIBROS DISPONIBLES</strong> </caption>
+        <TR>
+            <th>Id_libro</th>
+            <th>titulo del libro</th>
+            <th>autor</th>
+            <th>Editorial_libro</th>
+            <th>genero</th>
+        </TR>
+        <tbody id="libroTable3"></tbody>
+    </table> 
+    
+    </div>
+    <div class="botonespag">
+    <button onclick="history.back()">Volver atrás</button>
+</div>
+<script src="CLIENTE-CHICOS.js"></script>
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const miembroId = params.get('id');
+    const miembroNombre = params.get('nombre');
+ document.getElementById("dueño").innerHTML= ` <strong>LIBROS DISPONIBLES ${miembroNombre}</strong> `;
+    document.addEventListener("DOMContentLoaded", MostrasPrestados(parseInt(miembroId)));
+</script>
+</body>
+</html>
